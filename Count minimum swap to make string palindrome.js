@@ -41,4 +41,4 @@ rev = str1.reverse();
 var ans2 = countSwap(rev);
 console.log(Math.max(ans1, ans2));
 
-// This code is contributed by ukasp.
+// This code is contributed by sanjana.
