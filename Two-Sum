@@ -1,0 +1,20 @@
+// Given a sorted array of integers, return indices of two numbers such that they add up to a target value. Print -1 -1 if not found.
+var arr = [2,7,11,15], n = 4, b = 9;
+//Using two pointers
+
+function twoSum(arr,n,b){
+    var i = 0
+    var j = n-1
+    while(i<j){
+        if(arr[i]+arr[j]==b){
+            return [i,j]
+        }
+        else if(arr[i]+arr[j]<b){
+            i++
+        }
+        else{
+            j--
+        }
+    }
+    return [-1,-1]
+}
