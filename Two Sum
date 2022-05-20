@@ -1,0 +1,14 @@
+// Given a sorted array of integers, return indices of two numbers such that they add up to a target value. Print -1 -1 if not found.
+var n = 4, b = 9, arr = [2,7,11,15];
+// Approach using brute force
+
+function twoSum(arr,n,b){
+    for(var i=0;i<n;i++){
+        for(var j=i+1;j<n;j++){
+            if(arr[i]+arr[j]==b){
+                return [i,j]
+            }
+        }
+    }
+    return [-1,-1]
+}
