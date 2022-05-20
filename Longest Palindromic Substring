@@ -1,0 +1,34 @@
+//You are provided a stringS. Write a program that returns length of the longest palindromic substring of that string.
+var s = thisracecarisgood
+
+
+function palinSubst(s){
+    let n = s.length
+    if(n < 2){
+        return n
+    }
+    let max = 1
+    let start = 0
+    let l
+    let h
+    for(let i = 0; i < n; i++){
+        l = i - 1
+        h = i + 1
+        while(h < n && s[h] == s[i]) //increment 'high'                               
+            h++
+     
+        while(l >= 0 && s[l] == s[i]) // decrement 'low'               
+            l--
+     
+        while(l>= 0 && h< n && s[l] == s[h]){
+            l--
+            h++
+        }
+        let len = h - l - 1
+        if(max < len){
+            max = len
+            start = l+1
+        }
+    }
+    return max
+}
